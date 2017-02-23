@@ -15,11 +15,17 @@ public class HelloAgain {
 
     HelloAgain agent = new HelloAgain();
     agent.say_something(in, out);
+    agent.say_in_french("Bonjour, monseur. Comment ca-va?", in, out);
+    
     out.close();
   }
   
   public static void say_something(InputReader in, PrintWriter out) {
     out.println("Hello again, world!");
+  }
+
+  public static void say_in_french(String message, InputReader in, PrintWriter out) {
+    out.println(message);
   }
 
   static class InputReader {
