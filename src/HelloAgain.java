@@ -16,7 +16,7 @@ public class HelloAgain {
     HelloAgain agent = new HelloAgain();
     agent.say_something(in, out);
     agent.say_in_french("Bonjour, monseur. Comment ca-va?", in, out);
-    
+    agen.say_in_vietnamese("xin chao!", in, out);
     out.close();
   }
   
@@ -25,6 +25,10 @@ public class HelloAgain {
   }
 
   public static void say_in_french(String message, InputReader in, PrintWriter out) {
+    out.println(message);
+  }
+
+  public static void say_in_vietnamese(String message, InputReader in, PrintWriter out) {
     out.println(message);
   }
 
