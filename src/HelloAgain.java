@@ -1,20 +1,25 @@
 import java.io.OutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.PrintWriter;
+import java.io.PrintWriter;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class HelloAgain {
   public static void main (String[] args) {
     InputStream inputStr = System.in;
     OutputStream outputStr = System.out;
     InputReader in = new InputReader(inputStr);
-    OutputReader out = new OutputReader(outputStr);
+    PrintWriter out = new PrintWriter(outputStr);
 
     HelloAgain agent = new HelloAgain();
-    agent.say_something();
+    agent.say_something(in, out);
     out.close();
+  }
+  
+  public static void say_something(InputReader in, PrintWriter out) {
+    out.println("Hello again, world!");
   }
 
   static class InputReader {
